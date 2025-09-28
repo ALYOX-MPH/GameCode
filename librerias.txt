@@ -1,0 +1,5 @@
+pip install pandas
+pip install matplotlib
+pip install seaborn
+pip install pillow
+Si le da error con el tkinter tiene que actualizar su vercion de python 
