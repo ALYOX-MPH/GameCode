@@ -65,7 +65,7 @@ class App:
             "Grupo: CIncobite\n"
             "Integrantes:\n"
             "- Álvaro Pérez\n"
-            "- Poner su nombre pliisss\n"
+            "- Edgar Rosario\n"
             "- Poner su nombre pliisss\n"
             "- Poner su nombre pliisss\n"
             "- "
