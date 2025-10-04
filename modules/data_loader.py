@@ -1,5 +1,5 @@
 import pandas as pd
 
-def load_data(path="data/data_mas_falsa_que_tu_novia.csv"):
+def load_data(path="data/juegos_limpios.csv"):
     df = pd.read_csv(path)
     return df
