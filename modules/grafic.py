@@ -11,4 +11,3 @@ def create_visualizations(df, option):
 
 
 
-

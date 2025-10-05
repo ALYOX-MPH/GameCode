@@ -17,6 +17,7 @@ def open_graph_view(root, df):
     graphs = [
         ("Evolucion de la Industria", "assets/logo.png", lambda: create_visualizations(df, "Evolucion de la Industria")),
         ("Analisis por Genero", "assets/logo.png", lambda: create_visualizations(df, "Analisis por Genero")),  # CORREGIDO
+        
     
     ]
 
