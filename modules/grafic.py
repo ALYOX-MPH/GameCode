@@ -5,6 +5,8 @@ from grafic_fun.platform_trend_analysis import create_platform_quality_sales_tre
 from grafic_fun.critic_sales_correlation import create_critic_sales_correlation
 from grafic_fun.radar_regionygenero import grafic_radar_region_genero
 from grafic_fun.genre_VentasvsCritica import grafic_VentasvsCritica
+from grafic_fun.TopGames import top_games_available
+from grafic_fun.Console_Show import Available_Games_Console
 
 def create_visualizations(df, option):
     if option == "Evolucion de la Industria":
@@ -25,3 +27,8 @@ def create_visualizations(df, option):
     elif option == "Ventas por Region y Genero":
          grafic_radar_region_genero(df)
 
+    elif option == "Top 10 de Juegos Disponibles":
+        top_games_available(df)
+
+    elif option == "Cantidad de Juegos por Consolas":
+        Available_Games_Console(df)

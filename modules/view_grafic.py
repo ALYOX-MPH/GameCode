@@ -17,10 +17,12 @@ def open_graph_view(root, df):
     graphs = [
         ("Evolucion de la Industria", "assets/logo.png", lambda: create_visualizations(df, "Evolucion de la Industria")),
         ("Analisis por Genero", "assets/logo.png", lambda: create_visualizations(df, "Analisis por Genero")),  # CORREGIDO
-            ("Tendencia por Plataforma", "assets/logo.png", lambda: create_visualizations(df, "Tendencia por Plataforma")),
+        ("Tendencia por Plataforma", "assets/logo.png", lambda: create_visualizations(df, "Tendencia por Plataforma")),
         ("Correlacion Critica-Ventas", "assets/logo.png", lambda: create_visualizations(df, "Correlacion Critica-Ventas")),
         ("Analisis de Ventas contra Critica", "assets/logo.png", lambda: create_visualizations(df, "Analisis de Ventas contra Critica")),
         ("Ventas por Region y Genero", "assets/logo.png", lambda: create_visualizations(df, "Ventas por Region y Genero")),
+        ("Top 10 de Juegos Disponibles", "assets/logo.png", lambda: create_visualizations(df, "Top 10 de Juegos Disponibles")),
+        ("Cantidad de Juegos por Consolas", "assets/logo.png", lambda: create_visualizations(df, "Cantidad de Juegos por Consolas"))
     
     ]
 
