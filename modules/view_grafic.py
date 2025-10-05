@@ -9,7 +9,7 @@ def open_graph_view(root, df):
     win.config(bg="#1e1e2f")
 
     tk.Label(win, text="Visualizaciones Disponibles",
-             font=("Arial Black", 18), fg="#00d4ff", bg="#1e1e2f").pack(pady=10)
+            font=("Arial Black", 18), fg="#00d4ff", bg="#1e1e2f").pack(pady=10)
 
     frame = tk.Frame(win, bg="#1e1e2f")
     frame.pack(pady=20)
@@ -17,7 +17,8 @@ def open_graph_view(root, df):
     graphs = [
         ("Evolucion de la Industria", "assets/logo.png", lambda: create_visualizations(df, "Evolucion de la Industria")),
         ("Analisis por Genero", "assets/logo.png", lambda: create_visualizations(df, "Analisis por Genero")),  # CORREGIDO
-    
+        ("Tendencia por Plataforma", "assets/logo.png", lambda: create_visualizations(df, "Tendencia por Plataforma")),
+        ("Correlacion Critica-Ventas", "assets/logo.png", lambda: create_visualizations(df, "Correlacion Critica-Ventas")),
     ]
 
     for i, (title, img_file, callback) in enumerate(graphs):
