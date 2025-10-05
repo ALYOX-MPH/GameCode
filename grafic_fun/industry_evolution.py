@@ -3,10 +3,10 @@ import seaborn as sns
 import pandas as pd
 
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+import tkinter as tk
 
 
-
-def create_industry_evolution(df):
+def create_industry_evolution(df, parent):
     # Procesar datos - asumiendo que tienes columnas similares
     df_processed = df.copy()
     
@@ -64,4 +64,7 @@ def create_industry_evolution(df):
         ax4.set_ylabel('Género')
     
     plt.tight_layout()
-    plt.show()
+
+    canvas = FigureCanvasTkAgg(fig, master=parent)
+    canvas.draw()
+    canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
