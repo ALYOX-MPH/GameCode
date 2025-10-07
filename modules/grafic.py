@@ -1,19 +1,21 @@
 #fuciones 
-from grafic_fun.industry_evolution import create_industry_evolution
 from grafic_fun.genre_analysis import create_genre_analysis
-
+from grafic_fun.basic_analysis import create_basic_analysis
+from grafic_fun.console_analysis import create_console_analysis
+from grafic_fun.user_preferences_analysis import create_user_analysis
+from grafic_fun.insight_analysis import create_insight_analysis
 def create_visualizations(df, option, parent):
     """Dirige a la visualización correspondiente"""
-    if option == "Evolución de la Industria":
-        return create_industry_evolution(df, parent)
+    if option == "Análisis por plataforma":
+        return create_console_analysis(df, parent)
     elif option == "Análisis por Género":  
         return create_genre_analysis(df, parent)
-   # elif option == "Analisis por Sector":
-       # return create_sector_analysis(df, parent)
-    #elif option == "Distribucion Ingresos":
-      #  return create_income_distribution(df, parent)
-    #elif option == "Analisis Geografico":
-        return create_geo_analysis(df, parent)
+    elif option == "Estadísticas básicas":
+     return create_basic_analysis(df, parent)
+    elif option == "Preferencias de usuarios":
+       return create_user_analysis(df, parent)
+    elif option == "Insight":
+       return create_insight_analysis(df, parent)
     else:
         # Mensaje de error si la opción no existe
         import tkinter as tk
