@@ -139,8 +139,13 @@ incansablemente para llevar la magia del gaming a cada rincón del mundo.""",
         tk.Label(content, text="SOBRE NOSOTROS", font=("Arial Black", 28),
                  fg="white", bg="#1e1e2f").pack(pady=20)
         
-        tk.Label(content, text="""Somos GameSoft, una empresa dedicada al desarrollo 
-de videojuegos innovadores y de alta calidad.
+        tk.Label(content, text="""Somos Cincobits, una empresa dedicada al analisis 
+de la industria de los videojuegos.
+
+GameSoft es una herramienta de software desarrollada por nuestro equipo que se encarga
+de analizar datos de Metacritic sobre la industria de los videojuegos. 
+Los resultados se muestran mediante gráficas analíticas
+generadas a partir de algoritmos complejos.
 
 Fundada en 2018, hemos crecido de un pequeño equipo de 5 personas 
 a una familia de más de 200 profesionales apasionados por los videojuegos.
