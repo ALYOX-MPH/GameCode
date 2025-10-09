@@ -3,7 +3,7 @@ from tkinter import ttk
 from modules.grafic import create_visualizations
 
 def open_graph_view(root, df):
-    # --- Crear ventana principal ---
+    # Crear ventana principal 
     win = tk.Toplevel(root)
     win.title("Visualizaciones - Dashboard")
     win.config(bg="#0f0f23")
@@ -14,20 +14,20 @@ def open_graph_view(root, df):
     win.geometry(f"{screen_width}x{screen_height}")
     win.minsize(1000, 700)
 
-    # --- Estilos ---
+    # Estilos 
     style = ttk.Style()
     style.theme_use('clam')
     style.configure("Custom.TFrame", background="#0f0f23")
     style.configure("Card.TFrame", background="#1a1a2e", relief="flat", borderwidth=1)
 
-    # --- Contenedor principal ---
+    # Contenedor principal 
     main_container = tk.Frame(win, bg="#0f0f23")
     main_container.pack(fill="both", expand=True, padx=20, pady=20)
 
     content_container = tk.Frame(main_container, bg="#0f0f23")
     content_container.pack(fill="both", expand=True)
 
-    # --- Menú lateral ---
+    #Menú lateral 
     nav_width = 270
     nav_frame = ttk.Frame(content_container, style="Card.TFrame", width=nav_width)
     nav_frame.pack(side="left", fill="y", padx=(0, 20))
@@ -41,14 +41,14 @@ def open_graph_view(root, df):
         bg="#1a1a2e"
     ).pack(pady=(20, 15))
 
-    # --- Contenedor de gráficos ---
+    # Contenedor de gráficos 
     graph_container = ttk.Frame(content_container, style="Custom.TFrame")
     graph_container.pack(side="right", fill="both", expand=True)
 
     graph_main_frame = ttk.Frame(graph_container, style="Custom.TFrame")
     graph_main_frame.pack(fill="both", expand=True, padx=10, pady=10)
 
-    # --- Diccionario para guardar las gráficas ---
+    #Diccionario para guardar las gráficas 
     graph_frames = {}
 
     graphs = [
@@ -60,7 +60,7 @@ def open_graph_view(root, df):
 
     ]
 
-    # --- Crear frames de gráficas ---
+    # Crear frames de gráficas ---
     for g in graphs:
         # Frame contenedor para cada gráfica
         frame_container = ttk.Frame(graph_main_frame, style="Card.TFrame")
@@ -106,7 +106,7 @@ def open_graph_view(root, df):
         # Ocultar inicialmente todos los frames
         frame_container.pack_forget()
 
-    # --- Función para mostrar la gráfica seleccionada ---
+    # Función para mostrar la gráfica seleccionada ---
     def mostrar_grafica(key):
         # Ocultar todos los frames primero
         for graph_data in graph_frames.values():
@@ -127,7 +127,7 @@ def open_graph_view(root, df):
         # Forzar actualización de la ventana
         win.update_idletasks()
 
-    # --- Crear botones de navegación ---
+    # Crear botones de navegación 
     def create_nav_button(parent, graph):
         btn = tk.Button(
             parent,
@@ -147,11 +147,11 @@ def open_graph_view(root, df):
         create_nav_button(nav_frame, g)
 
  
-    # --- Mostrar la primera gráfica por defecto ---
+    # Mostrar la primera gráfica por defecto 
     if graphs:
         mostrar_grafica(graphs[0]["key"])
 
-    # --- Función para ajustar tamaños cuando cambia la ventana ---
+    # Función para ajustar tamaños cuando cambia la ventana 
     def on_resize(event=None):
         # Recalcular tamaños disponibles
         available_width = win.winfo_width() - (nav_width + 80)
